@@ -32,7 +32,7 @@ def login_ui():
                 st.session_state.user_id = result # result è l'ID dell'utente
                 st.session_state.nickname = nickname
                 st.success(f"Benvenuto, {nickname}! Sei stato aggiunto al calendario.")
-              st.rerun()
+                st.rerun()
             elif "Nickname già in uso" in result:
                 # Se l'utente esiste già, lo recuperiamo
                 conn = get_db_connection()
